@@ -7,7 +7,7 @@ module.exports = {
   mode: "dev",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    filename: "qdben-exigencia-bundle.js",
     chunkFilename: "[id].js",
     publicPath: "",
   },

@@ -1,7 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import TextComponent from "./components/TextComponent";
 import "./index.css";
 
-const App = () => <h1>BoilerPlace React</h1>;
+const App = () => {
+  return <TextComponent />;
+};
 
 ReactDOM.render(<App />, document.querySelector("#root"));
