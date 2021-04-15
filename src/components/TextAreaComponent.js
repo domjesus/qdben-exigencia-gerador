@@ -55,9 +55,12 @@ regularidade da manutenção do benefício.</li>
 apresentados ainda os seguintes documentos: certidão de óbito e documentos originais ou cópias
 autenticadas dos documentos de identificação da pessoa falecida e dos dependentes que recebem o
 benefício. Caso o falecido não tenha CPF deverá ser providenciado junto à Receita Federal do Brasil - RFB.</li>
-<li>Comunicamos que não havendo o agendamento no prazo acima citado (60 dias), seu
+<li className='to-copy-li'>Comunicamos que não havendo o agendamento no prazo acima citado (60 dias), seu
 benefício será suspenso até o comparecimento para apresentação da documentação. Transcorridos 30
 (trinta) dias a contar da suspensão, o benefício será cessado nos termos do art. 69 da Lei nº 8.212/1991.</li>
+<li className="to-copy-li">
+Salienta-se que os documentos poderão ser enviados via aplicativo MEU INSS ou pelo site www.inss.gov.br, ambos por meio senha de acesso, não havendo necessidade de comparecimento a uma unidade do INSS.
+</li>
         </ol>
 
         <p className="to-copy">Atenciosamente</p>
