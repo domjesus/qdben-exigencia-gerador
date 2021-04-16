@@ -1,11 +1,13 @@
 import React from "react"
+import { Box, Typography } from "@material-ui/core";
 
 const funcaoDate = () => `${new Date().toLocaleDateString()}`;
 
 const TextAreaComponent = (props) => {
 const {cpf, nb,esp,get} = props.infos;
 
-return <div rows='50' style={{width:'90%'}}>
+return <Box m={2} p={2} color="primary" bgcolor="text.disabled">
+        
         <div style={{textAlign:'center'}} className="to-copy">
             Brasília, {funcaoDate()}
         </div> 
@@ -65,7 +67,7 @@ Salienta-se que os documentos poderão ser enviados via aplicativo MEU INSS ou p
 
         <p className="to-copy">Atenciosamente</p>
         <p className="to-copy">INSTITUTO NACIONAL DO SEGURO SOCIAL – INSS</p>
-    </div>
+    </Box>
 
 }
 

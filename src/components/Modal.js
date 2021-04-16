@@ -1,21 +1,28 @@
+import { Box, Button, Dialog, DialogTitle, IconButton, Typography } from "@material-ui/core";
+
 import React from "react";
-import {Button, Modal } from "react-bootstrap";
 
 const MyModal = (props) => (
-  <Modal show={props.show} size="lg" onHide={() => props.closeModal()}>
-    <Modal.Header closeButton>
-      <Modal.Title>Colar do GET</Modal.Title>
-    </Modal.Header>
+  <Box m={2}>
+    <Dialog open={props.show} onClose={() => props.closeModal()}>
+      <DialogTitle id="simple-dialog-title">
+        Colar texto do GET
+      </DialogTitle>
 
-    <Modal.Body>
-      <p>Dentro do detalhamento de uma tarefa no GET, tecle Ctrl+a (para selecionar todo o texto) e cole abaixo</p>      
-      <textarea rows='5' style={{'width':'100%'}} id="texto-to-past" onKeyUp={(e) => props.trataTexto(e)}></textarea>
-    </Modal.Body>
+      <Box m={2}>
+        <Typography>
+          Dentro do detalhamento de uma tarefa no GET, tecle Ctrl+a (para selecionar todo o texto) e cole abaixo
+        </Typography>
+        <textarea rows="5" style={{ width: "100%" }} id="texto-to-past" onKeyUp={(e) => props.trataTexto(e)}></textarea>
+      </Box>
 
-    <Modal.Footer>
-      <Button variant="secondary" onClick={() => props.closeModal()}>Fechar</Button>      
-    </Modal.Footer>
-  </Modal>
+      <Box m={2} style={{"float":"right"}}>
+        <Button variant="contained" color="primary" onClick={() => props.closeModal()}>
+          Fechar
+        </Button>
+      </Box>
+    </Dialog>
+  </Box>
 );
 
 export default MyModal;

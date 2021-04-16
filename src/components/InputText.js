@@ -1,26 +1,19 @@
-import React, { useEffect } from "react"
-import { FormControl, InputGroup } from "react-bootstrap"
+import { TextField } from "@material-ui/core";
+import React from "react"
 import InputMask from "react-input-mask"
 
 const InputText = (props) =>{
 
 const {mask} = props;
 
-return <InputGroup className="mb-3">
-  
-    <InputGroup.Prepend>
-      <InputGroup.Text id={props.name}>{props.label}: </InputGroup.Text>
-    </InputGroup.Prepend>       
-     <InputMask mask={mask} maskChar=" " value={props.value} onChange={(e) => props.onChange(e)}>
+return <InputMask mask={mask} maskChar=" " value={props.value} onChange={(e) => props.onChange(e)}>
      {(inputProps) => 
-    <FormControl
-    placeholder={props.placeholder}
-    aria-label={props.placeholder}
-    aria-describedby={props.name}      
+    <TextField    
     onKeyUp={(e) => props.onChange(e)}      
+    variant="outlined"
+    label={props.label}    
     />}    
-    </InputMask> 
-  </InputGroup>
+    </InputMask>   
 } 
 
   export default InputText
